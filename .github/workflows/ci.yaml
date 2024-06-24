@@ -1,8 +1,7 @@
 name: ci workflow
 on:
   pull_request:
-    branches:
-      - "main"
+
 jobs:
   ci-workflow:
     name: ci workflow

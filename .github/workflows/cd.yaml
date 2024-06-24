@@ -2,8 +2,7 @@ name: cd workflow
 
 on:
   push:
-    branches:
-      - "main"
+
 
 jobs:
   cd-workflow-job:
