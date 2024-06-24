@@ -1,6 +1,6 @@
 name: ci workflow
 on:
-  pull_request:
+  push:
 
 jobs:
   ci-workflow:
