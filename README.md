@@ -5,4 +5,4 @@
 ```mvn clean package```
 
 ### Run Tests
-``` test ci2```
+``` test ci2  2```
