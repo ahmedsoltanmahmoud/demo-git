@@ -2,6 +2,8 @@ name: cd workflow
 
 on:
   push:
+    branches: 
+      - "main"
 
 
 jobs:
@@ -25,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: dinagamal/java-app:latest
+          tags: ahmedsoltan/java-app:latest
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
