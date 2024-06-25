@@ -3,7 +3,6 @@ name: cd workflow
 on:
   push:
 
-
 jobs:
   cd-workflow-job:
     name: cd workflow
@@ -25,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: dinagamal/java-app:latest
+          tags: ahmedsoltan/java-app:latest
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -34,6 +33,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
 
+          
       - name: deploy to k8s
         run: |-
           aws eks update-kubeconfig --region us-east-2 --name eks
